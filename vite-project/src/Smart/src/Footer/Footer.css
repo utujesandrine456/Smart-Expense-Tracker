@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+.footer {
+    width: 100%;
+    background-color: #577F26;
+    padding: 40px 20px 20px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 1350px;
+    overflow: hidden;
+}
+
+.footer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.footer h1 {
+    font-family: 'Sofia', cursive;
+    font-size: 28px;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto  0;
+}
+
+.footer-section , .footer-section1 {
+    flex: 1;
+    min-width: 220px;
+    margin-top: -80px;
+    margin-left: 300px;
+    position: relative;
+    left: 50px;
+}
+
+.footer-section h4, .footer-section1 h4{
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer-section .footer-p , .footer-section1 p{
+    font-size: 15px;
+}
+.footer-section1{
+    position: relative;
+    top: -35px;
+    left: 70px;
+}
+.footer-section p, .footer-section a {
+    font-size: 16px;
+    color: #e5e5e5;
+    text-decoration: none;
+}
+
+.footer-section ul{
+    list-style-type: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    position: relative;
+    top:15px;
+    padding-top: 10px;
+    margin-top: 15px;
+    border-top: 1px solid #ffffff40;
+    font-size: 13px;
+    color: #ddd;
+}
+

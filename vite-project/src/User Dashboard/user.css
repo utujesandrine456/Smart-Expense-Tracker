@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  padding: 24px 15px 0;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.aside_navbar{
+  width: 300px;
+  float: left;
+  height: 100vh;
+  margin-top: -25px;
+  background-color:#577F26;
+  margin-left: -25px;
+}
+
+.aside_navbar img{
+  float: left;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  width:80px;
+  height:80px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.aside_navbar h1{
+  white-space: nowrap;
+  font-size: 20px;
+  position: relative;
+  top:40px;
+  left:10px;
+  font-family: 'Sofia', cursive;
+  color:white;
+}
+
+.aside_navbar .links{
+  margin-top: 100px;
+  margin-left: 50px;
+}
+.aside_navbar .links a{
+  font-weight: 500;
+  margin: 7px 20px;
+  width: 180px;
+  padding:10px 40px;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  text-decoration: none;
+  color:white
+  
+}
+.aside_navbar .links .active, .aside_navbar .links a:hover{
+  background-color: rgba(206, 245, 160, 0.5);
+  border-radius: 5px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Work sans', sans-serif;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 100px;
+  color:#455135;
+  transition: 0.3s ease-in-out;
+}
+.welcome-text:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.nav-buttons .btn {
+  padding: 9px 16px;
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: -4px;
+  left: -50px;
+}
+
+.btn-back{
+  color: white;
+  font-weight: 500;
+  background-color:#577F26;
+}
+.btn-back:hover{
+  background-color: #92a877;
+}
+.btn-logout:hover{
+  background-color: #de9892;
+}
+.btn-logout {
+  position: relative;
+  margin-left: 10px;
+  background-color:#ff0000;
+  color: white;
+  font-weight: 500;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+  margin-bottom: 40px;
+  position: relative;
+  gap: 5px;
+  
+}
+
+.card {
+  width: 225px;
+  height: 140px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  padding: 30px 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color:rgba(87, 127, 38, 0.3);
+  border-radius: 50%;
+  margin-right: 16px;
+  position: relative;
+  top: -20px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: bold;
+  
+
+}
+
+.card-amount {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card-change {
+  font-size: 15px;
+}
+
+.card-change.positive {
+  color: #2ecc71;
+}
+
+.card-change.negative {
+  color: #e74c3c;
+}
+
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.chart-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.table-container {
+  background-color: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 200px;
+  left: 450px;
+  z-index: 4;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.table-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter-options {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-select,
+.filter-input {
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th,
+.expense-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.expense-table th {
+  border-bottom: 2px solid #ddd;
+}
+
+.positive {
+  color: #2ecc71;
+}
+
+.negative {
+  color: #e74c3c;
+}
+
+.view-details {
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.view-details:hover {
+  color: #2980b9;
+}
+
+.blurred {
+  background-color: rgba(239, 239, 239, 0.8);
+  width: 78%;
+  height: 100vh;
+  margin-left: 280px;
+  margin-top: -25px;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.8;
+  filter: blur(2px);
+}
+
+/* Button to close the History Table */
+.btn-close {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}

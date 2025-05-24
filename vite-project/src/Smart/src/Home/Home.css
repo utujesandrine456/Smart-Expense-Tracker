@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work sans', sans-serif;
+}
+.main-container{
+    width: 100%;
+    height: 100vh; 
+    
+}
+.main-navbar{
+    background-image: url("../assets/Grow-money.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-navbar .logo{
+    width: 150px;
+    height: 150px;
+    margin-left: -30px;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.main-navbar h1{
+    white-space: nowrap;
+    margin-left: 90px;
+    margin-top: -90px;
+    font-size: 30px;
+    font-family: 'Sofia', cursive;
+    color: #577F26;
+    cursor: pointer;
+}
+
+nav .nav-links{
+    display: flex;
+    margin: -60px  0  0 0;
+    position: relative;
+    left: -80px;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;           
+}
+
+nav .nav-links a {
+    position: relative;
+    display: inline-block; 
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin-left: 50px;
+    margin-top: 45px;
+}
+
+nav .nav-links a:hover {
+    color: #577b26;
+    cursor: pointer;
+}
+
+nav .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 0%;
+    background-color: #577b26;
+    transition: width 0.3s ease;
+}
+
+nav .nav-links a:hover::after {
+    width: 100%;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+nav button{
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    padding:0 18px;
+    margin:-38px  0  0  0;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #577F26;
+    border-radius: 7px;
+    color: white;
+}
+
+nav button:hover{
+    cursor: pointer;
+    transition:0.4s ease-in-out;
+    background-color: #7caa43;
+}
+
+nav .signup-button a, .main-navbar .login-button a{
+    text-decoration: none;
+    color:#577F26;
+}
+
+.main-navbar .login-button a{
+    color: white;
+}
+
+nav .signup-button{
+    margin-left: 20px;
+    background-color: white;
+    color: #577F26;
+}
+
+nav .signup-button:hover{
+    background-color: #d1efa9;
+}
+
+.main-navbar h2, .main-navbar p{
+    white-space: nowrap;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.main-navbar h2{
+    margin-top: 100px;
+    font-size: 65px;
+    color:#5f842f;
+}
+
+.main-navbar p{
+    font-size: 17px;
+    color: white;
+    max-width: 600px;
+}
+
+.main-navbar .free-button{
+    white-space: nowrap;
+    width: 150px;
+    padding: 15px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background-color: #577F26;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0 0 100px;
+    
+}
+
+.main-container .free-button a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-navbar .free-button:hover{
+    cursor: pointer;
+    transition:0.4s ease-in-out;
+    background-color: #7caa43;
+}
+
+.core-features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.core-features h2, .core-features .main-p, .working-step h2, .users h2{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+    color:#577b26;
+}
+
+.core-features .main-p{
+    margin-top: -10px;
+}
+
+.core-features .main-p, .working-step p, .users p{
+    font-size: 15px;
+    color:#4e4f4d;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+.working-step{
+    margin-top: 60px;
+    background-color: #f7fdf4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.users{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.forms{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.feature-card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 300px;
+    height: 170px;
+    padding: 20px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 0.5px solid #ffffff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover{
+    color: white;
+    background-color: #7caa43;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.feature-card h3{
+    text-align: center;
+    padding: 4px 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.feature-card p{
+    font-size: 15px;
+    color: #4e4f4d;
+    padding-top: 8px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.feature-card span{
+    border-radius: 50%;
+    width: 50px;
+    height: 80px;
+    background-color: rgba(201, 231, 165, 0.4);
+    font-size: 28px;
+    color: #577b31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.working-step{
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.working-step .simple-p {
+    font-size: 16px;
+    color: #4e4f4d;
+    margin: -10px 0 80px 0;
+}
+
+.work-forms {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    padding:60px 20px 20px;
+    width: 320px;
+    height: 160px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.work-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.work-card p {
+    font-size: 14px;
+    color: #3e3e3d;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.work-card:hover {
+    background-color:#7caa43;
+    color: white;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.users-card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.user-card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    height: 175px;
+    padding:20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.user-card:hover{
+    background-color:#7caa43;
+    color: white;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.user-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-card h3{
+    margin-top: -40px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+
+.user-card p{
+    font-size: 14px;
+    color: #3a3a3a;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 0 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #eef1f5;
+      margin: 0  0  10px;
+      font-family:'Georgia', serif;
+    }
+
+    .main_container {
+        font-family:'Georgia', serif;
+        overflow-x: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .main_container img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      position: relative;
+      margin-top:-30px;
+      margin-left: -30px;
+    }
+    
+    .main_container h2{
+      font-size: 40px;
+      font-family: 'Sofia', cursive;
+      color:#577F26;
+      position: relative;
+      margin-top: -100px;
+      left: 90px;
+    }
+    
+    .drop_down{
+      width: 400px;
+      height: 200px;
+      background-color: #cde7ad;
+      border-radius: 10px;
+      padding:15px 20px 10px;
+      position: relative;
+      margin-top: -245px;
+      margin-left:700px;
+      margin-bottom: 45px;
+      display: none;
+    }
+
+    .drop_down h4{
+      font-size: 30px;
+      font-weight: 600;
+      color: rgb(34, 37, 29);
+      font-family: 'Sofia', sans-serif;
+      text-align: center;
+    }
+
+    .drop_down ul {
+      list-style-type: disc;
+      margin-top: 10px;
+      position: relative;
+      left: 20px;
+      
+    }
+
+    .drop_down ul li{
+      margin-top: 10px;
+      margin-left: 10px;
+      color: rgb(117, 113, 113);
+    }
+    .make_dropdown:hover .drop_down{
+      cursor: pointer;
+      display: block;
+    }
+    
+
+    .addnew {
+      padding:12px 15px;
+      position: relative;
+      top: -40px;
+      display: flex;
+      float: right;
+      border: none;
+      background-color: #c7f391;
+      border-radius: 8px;
+      font-weight: 600;
+      font-family:'Georgia', serif;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .addnew:hover {
+      cursor: pointer;
+      background-color: #cde7ad;
+    }
+
+    .main_container h1{
+        font-size: 50px;
+        font-family:'Georgia', serif;
+        color:#6b992192;
+        margin:50px 0 50px;
+        margin-left: 300px;
+        font-weight: 600;
+        transition: 0.4s ease-in-out;
+    }
+    .main_container h1:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    th {
+      background-color: #577F26;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    td {
+      padding: 4px;
+      text-align: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    tr:hover {
+      background-color: #f9fafc;
+    }
+
+    table input[type="text"],
+    table input[type="date"] {
+      width: 118px;
+      height:30px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+      transition: 0.3s ease;
+      font-family:'Georgia', serif;
+      padding-left:5px;
+    }
+
+    table input[type="text"]:focus,
+    table input[type="date"]:focus {
+      outline: none;
+      border-color:#577F26;
+      box-shadow: 0 0 0 2px rgba(8, 58, 8, 0.2);
+      font-family:'Georgia', serif;
+      color:#242e17;
+    }
+
+    table input::placeholder {
+      color: #999;
+      font-family:'Georgia', serif;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      color: #fff;
+      font-family:'Georgia', serif;
+    }
+
+    .btn_edit {
+       background-color: #68b10f;
+    }
+
+    .btn_submit{
+      background-color: rgb(0, 123, 255);
+    }
+
+    .btn_submit:hover{
+      background-color: rgb(103, 176, 255);
+    }
+    .btn_edit:hover {
+       background-color: rgb(144, 193, 85);
+    }
+
+    .btn_delete {
+       background-color: rgb(217, 13, 6);
+    }
+
+    .btn_delete:hover {
+       background-color: rgb(255, 56, 56);
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 13px;
+        padding: 10px;
+      }
+
+      table input[type="text"],
+      table input[type="date"] {
+        width: 70px;
+        padding: 6px;
+      }
+
+      .btn {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+    }
+
+
+  
