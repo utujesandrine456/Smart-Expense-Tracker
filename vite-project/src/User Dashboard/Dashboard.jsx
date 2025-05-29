@@ -157,7 +157,7 @@ return (
       <div className="dashboard-container">
         <div className='aside_navbar'>
             <img src={logo_dashboard} alt='food' />
-            <h1>Smart Expense tracker</h1>
+            <h1>Smart Expense</h1>
             <div className='links'>
                 <a href='#' onClick={() => setShowHistory(false)} className={!showHistory ? 'active' : ''}>Dashboard</a>
                 <a href='#' onClick={() => setShowHistory(true)} className={showHistory ? 'active' : ''}>History</a>
