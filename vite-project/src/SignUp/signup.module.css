@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 .main_container{
     width: 100%;
-    font-family:'Georgia', serif;
+    font-family: 'Poppins', sans-serif;
     height: 670px;
 }
 
@@ -33,6 +41,7 @@
     position: relative;
     top: -120px;
     left: 90px;
+    font-weight: bold;
 }
 
 .signup_aside h2{
@@ -51,7 +60,7 @@
 
 .small_form{
     padding: 20px 0  0  20px;
-    margin: 272px auto 0 auto;
+    margin: 230px auto 0 auto;
     width:400px;
     height: 130px;
     background-color: rgba(87, 127, 38, 1);
@@ -73,15 +82,14 @@
     padding: 30px;
     background-color: #fff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    font-family:'Georgia', serif;
     text-align: center;
     color: #333;
 }
   
   .main_content h2 {
-    font-size: 35px;
+    font-size: 30px;
     color: #577F26;
-    margin:35px  0  20px;
+    margin:35px  0  6px;
     font-weight: 600;
   }
   
@@ -92,7 +100,7 @@
   }
   
   .main_content h4 {
-    margin-top: 15px;
+    margin-top: 3px;
     margin-left: 40px;
     display: flex;
     align-items: center;
@@ -102,11 +110,12 @@
     color: #577F26;
   }
   .main_content span{
-    margin-top: 10px;
+    margin-top: 0;
     font-size: 30px;
     float: left;
     color:#577F26
   }
+
   .login_redirect {
     font-size: 18px;
     font-weight: 500;
@@ -187,13 +196,16 @@
     font-size: 16px;
     position: relative;
     left: 705px;
-    top: -10px;
+    top: 0;
 }
 
+.account pre{
+  font-family: 'Poppins', sans-serif;
+}
 .account label .check_2{
     position: relative;
-    top: -35px;
-    left:560px
+    top: -23px;
+    left:405px
 }
 
 .checkbox_wrapper {
