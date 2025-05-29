@@ -7,12 +7,14 @@ const jwt = require('jsonwebtoken');
 const _ = require('lodash');
 const cookieParser = require('cookie-parser');
 const { registerUser, verifyCode } = require('../controllers/authController');
+const { sendVerificationEmail } = require('../utils/emailUtils');
 
 
 
 
 const JWT_SECRET = 'securitymustbeyourpriority';
 const JWT_EXPIRES_IN = '1h';
+
 
 router.use(cookieParser());
 
@@ -266,6 +268,29 @@ router.post('/table', authentication, (req,res) => {
 
 router.post('/register', registerUser);
 router.post('/verify', verifyCode);
+
+router.post('/resend-code', async (req, res) => {
+    const { email } = req.body;
+    try {
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const code = Math.floor(100000 + Math.random() * 900000).toString();
+        const codeExpires = new Date(Date.now() + 15 * 60 * 1000); // 15 mins
+
+        user.verificationCode = code;
+        user.codeExpires = codeExpires;
+        await user.save();
+
+        await sendVerificationEmail(email, code);
+        res.json({ message: 'New verification code sent' });
+    } catch (error) {
+        console.error('Error resending verification code:', error);
+        res.status(500).json({ message: 'Failed to resend verification code' });
+    }
+});
 
 
 module.exports = router;
