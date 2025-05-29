@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/7a6898f73cd7a6aace48d3358810b49b-removebg-preview.png';
 import { MdEmail } from "react-icons/md";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/ReactToastify.css';
@@ -49,11 +49,15 @@ const VerifyEmail = () => {
         }
     };
 
-    const handleResendCode = () => {
-        setTimeleft(15);
-        toast.info('A new verification code has been sent.');
-        // Optionally, call your backend to resend the code here
-    }
+    const handleResendCode = async () => {
+        try {
+            const res = await axios.post('http://localhost:4000/api/auth/resend-code', { email });
+            setTimeleft(15 * 60); // Reset to 15 minutes
+            toast.success('New verification code sent to your email');
+        } catch (error) {
+            toast.error(error.response?.data?.message || 'Failed to resend code');
+        }
+    };
 
     const handleSubmit = async () => {
         const code = codeDigits.join('');
@@ -63,34 +67,39 @@ const VerifyEmail = () => {
         }
         setLoading(true);
         try {
-            const res = await axios.post('http://localhost:4000/api/auth/verify', { email, code });
+            const res = await axios.post('http://localhost:4000/api/auth/verify-email', { 
+                email, 
+                code 
+            });
             toast.success(res.data.message);
-            navigate('/table');
+            navigate('/login');
         } catch (error) {
             toast.error(error.response?.data?.message || 'Verification failed');
         }
         setLoading(false);
     };
 
+    
+    
     return(
         <>
             <ToastContainer />
-            <div className='flex flex-col w-full h-full text-center px-[80px] bg-[#f3e7d9] ' >
+            <div className='flex flex-col w-full h-full text-center px-[80px] bg-[#fff] ' >
                 <div className='flex flex-col '>
-                    <img src={logo} alt="logo" className='w-[90px] h-[70px] m-[40px] mt-[20px] mx-auto relative left-[-160px] ' />
-                    <h1 className='text-center text-5xl font-bold text-[#be741e] mt-[-100px] mb-[50px] '>TradeWise</h1>
+                    <img src={logo} alt="logo" className='w-[120px] h-[100px] m-[40px] mt-[5px] mx-auto relative left-[-230px] ' />
+                    <h1 className='text-center text-[30px] font-bold text-[#577F26] mt-[-112px] mb-[50px] '>Smart Expense Tracker</h1>
                     <p className='text-grey-600 text-center text-normal'></p>
                 </div>
-                <div className='bg-[#1C1206] text-white p-8 '>
+                <div className='bg-[#577F26] text-white p-8 '>
                     <MdEmail className='text-white text-5xl mx-auto justify-center align-center'   />
-                    <h2 className='font-bold text-2xl text-[#BE741E] pt-2'>Verify Your Email Address</h2>
+                    <h2 className='font-bold text-2xl text-white pt-2'>Verify Your Email Address</h2>
                     <p className='mt-4'>   Hi ,<br></br>
                         Please check your inbox and enter the verification<br></br>
                         code below to verify your email address. The code <br></br>
                         will expire in 15 seconds.
                     </p>
                 </div>
-                <div className='bg-[#1c1206] p-3 text-[#BE741E] '>
+                <div className='bg-[#1c1206] p-3 text-[#577F26] '>
                     <div className='flex flex-row justify-center gap-2 items-center mb-4 text-[#fff]'>
                         <IoTimer className='text-3xl'/>
                         <p className='text-center  mb-0 font-bold text-[20px] '>Timer: {timeLeft} </p>
@@ -111,14 +120,14 @@ const VerifyEmail = () => {
                             ))}
                         </div>
                     </form>
-                    <button className='bg-[#BE741E] text-[#fff]  p-2 mb-2 rounded mt-3 mb-[20px] ' onClick={handleSubmit} disabled={loading}>
+                    <button className='bg-[#577F26] text-[#fff]  p-2 mb-2 rounded mt-3 mb-[20px] ' onClick={handleSubmit} disabled={loading}>
                         {loading ? 'Verifying...' : 'Verify Email'}
                     </button>
                     <div className='flex  justify-center align-center mb-3'>
                         <a href="#" className=' font-bold text-[18px] underline hover:text-white transition-all duration-400 ease-in-out' onClick={handleResendCode}>Resend Code</a>
                     </div>
                 </div>
-                <div className='bg-[#BE741E] p-[11px]  '>
+                <div className='bg-[#577F26] p-[11px]  '>
                     <p>&copy; 2025 <span className='font-bold text-white'>TradeWise</span>. All rights reserved.</p>
                 </div>
             </div>
