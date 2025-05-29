@@ -11,7 +11,7 @@ export const cards = [
     {
         icon: <FaMoneyBillWave />,
         title: "Track Expenses Easily" ,
-        description: "Stay on top of where your money goes with simple, real-time tracking." ,
+        description: "Stay on top of where your money goes with real-time tracking." ,
     },
     {
         icon: <FaChartSimple />,
