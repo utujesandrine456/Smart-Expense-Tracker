@@ -16,7 +16,9 @@ const registerUser = async (req, res) => {
     await user.save();
 
     try {
+        console.log("Sending email to:", email);
         await sendVerificationEmail(email, code);
+        console.log("Email sent");
         res.json({ message: 'Verification email sent' });
     } catch (error) {
         console.error('Error sending verification email:', error);
